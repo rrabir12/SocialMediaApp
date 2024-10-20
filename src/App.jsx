@@ -100,22 +100,23 @@ const App = () => {
                   <div>
                     <Title level={4}>Sign In</Title>
                     <Space direction="vertical">
-                      <Button
+                    <Button
                         type="primary"
-                        icon={<GoogleOutlined />}
-                        onClick={() => signInWithProvider('google')}
-                        style={{ width: '100%' }}
-                      >
-                        Sign in with Google
-                      </Button>
-                      <Button
-                        type="default"
                         icon={<GithubOutlined />}
                         onClick={() => signInWithProvider('github')}
                         style={{ width: '100%' }}
                       >
                         Sign in with GitHub
                       </Button>
+                      <Button
+                        type="default"
+                        icon={<GoogleOutlined />}
+                        onClick={() => signInWithProvider('google')}
+                        style={{ width: '100%' }}
+                      >
+                        Sign in with Google
+                      </Button>
+                     
                     </Space>
                   </div>
                 )}

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { supabase } from './supabaseClient';
-import './post.css'
+import { supabase } from '../supabaseClient';
+import '../post.css'
 
 const Posts = () => {
   const [posts, setPosts] = useState([]);

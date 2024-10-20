@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { supabase } from './supabaseClient';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
-import Posts from './post'; // Ensure you have this component for displaying posts
-import CreatePost from '../createPost'; // Ensure you have this component for creating posts
+import Posts from './components/post'; 
+import CreatePost from './components/createPost'; 
 import { Button, Layout, Typography, Space, Card } from 'antd';
 import { GoogleOutlined, GithubOutlined, LogoutOutlined } from '@ant-design/icons';
 
@@ -58,7 +58,7 @@ const App = () => {
       <Layout style={{ minHeight: '100vh' }}>
         <Header style={{ background: '#001529', padding: '0 20px' }}>
           <Title level={3} style={{ color: '#fff', margin: 0 , marginTop: "13px"}}>
-            My Blog App
+            My Social Media App
           </Title>
         </Header>
         <Layout style={{ height: 'calc(100vh - 64px)' }}> {/* Adjust for header height */}
@@ -125,7 +125,7 @@ const App = () => {
           </Layout>
         </Layout>
         <Footer style={{ textAlign: 'center' }}>
-          <Text>My Blog App ©2024</Text>
+          <Text>My Social Media App ©2024</Text>
         </Footer>
       </Layout>
     </Router>

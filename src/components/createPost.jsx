@@ -1,6 +1,5 @@
-// src/CreatePost.js
 import React, { useState } from 'react';
-import { supabase } from './src/supabaseClient';
+import { supabase } from '../supabaseClient';
 import { Button, Input, message } from 'antd';
 
 const CreatePost = () => {

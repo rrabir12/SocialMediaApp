@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { supabase } from './supabaseClient';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import Posts from './components/post'; 
-import CreatePost from './components/createPost'; 
+import CreatePost from './components/createPost';
 import { Button, Layout, Typography, Space, Card } from 'antd';
 import { GoogleOutlined, GithubOutlined, LogoutOutlined } from '@ant-design/icons';
 
@@ -56,13 +56,13 @@ const App = () => {
   return (
     <Router>
       <Layout style={{ minHeight: '100vh' }}>
-        <Header style={{ background: '#001529', padding: '0 20px' }}>
+        <Header style={{ background: '#001529', padding: '0 20px', position: "fixed", width: "100%", zIndex: "100"}}>
           <Title level={3} style={{ color: '#fff', margin: 0 , marginTop: "13px"}}>
             My Social Media App
           </Title>
         </Header>
-        <Layout style={{ height: 'calc(100vh - 64px)' }}> {/* Adjust for header height */}
-          <Sider width={200} style={{ background: '#fff', position: 'fixed', height: '100%', left: 0 }}>
+        <Layout style={{ height: 'calc(100vh - 64px)' }}> 
+          <Sider width={200} style={{ background: '#fff', position: 'fixed', height: '100%', left: 0, marginTop: "65px"}}>
             <div style={{ padding: '20px' }}>
               <Space direction="vertical" style={{ width: '100%' }}>
                 <Link to="/create-post">
@@ -74,7 +74,7 @@ const App = () => {
               </Space>
             </div>
             {user ? (
-              <div style={{ padding: '10px', marginTop: "280px" }}>
+              <div style={{ padding: '10px', marginTop: "300px" }}>
                 <Title level={4}>{username}</Title>
                 <Button
                   type="primary"
@@ -87,7 +87,7 @@ const App = () => {
               </div>
             ) : null}
           </Sider>
-          <Layout style={{ marginLeft: 200 }}> {/* Push content to the right */}
+          <Layout style={{ marginLeft: 200 }}> 
             <Content style={{ padding: 24, margin: 0, minHeight: 280, textAlign: 'center', overflowY: 'auto' }}>
               <Card style={{ maxWidth: 600, margin: '0 auto', borderRadius: 10 }}>
                 {user ? (
